@@ -1,0 +1,10 @@
+{
+  "id": "ai-knowledge-graph",
+  "name": "AI Knowledge Graph",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Discover semantic connections between your notes using LLM APIs. Open any note and see related notes automatically.",
+  "author": "Jason Wu",
+  "authorUrl": "https://jiachen.lol",
+  "isDesktopOnly": false
+}
