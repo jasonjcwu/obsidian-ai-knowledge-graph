@@ -1,6 +1,5 @@
 /* ========== AI Knowledge Graph Plugin Styles ========== */
 
-/* Container */
 .ai-kg-container {
   padding: 12px 16px;
   font-size: 13px;
@@ -9,62 +8,35 @@
   user-select: text;
 }
 
-/* Empty state */
 .ai-kg-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 40px 16px;
   text-align: center;
   opacity: 0.6;
 }
+.ai-kg-empty-icon { font-size: 32px; margin-bottom: 12px; }
+.ai-kg-empty-text { font-size: 14px; margin-bottom: 6px; }
+.ai-kg-empty-hint { font-size: 11px; opacity: 0.7; }
 
-.ai-kg-empty-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.ai-kg-empty-text {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.ai-kg-empty-hint {
-  font-size: 11px;
-  opacity: 0.7;
-}
-
-/* Loading */
 .ai-kg-loading {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 16px;
 }
-
 .ai-kg-spinner {
-  width: 24px;
-  height: 24px;
+  width: 24px; height: 24px;
   border: 3px solid var(--background-modifier-border);
   border-top-color: var(--interactive-accent);
   border-radius: 50%;
   animation: ai-kg-spin 0.8s linear infinite;
   margin-bottom: 12px;
 }
+@keyframes ai-kg-spin { to { transform: rotate(360deg); } }
+.ai-kg-loading-text { font-size: 12px; opacity: 0.7; }
 
-@keyframes ai-kg-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.ai-kg-loading-text {
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-/* Error */
 .ai-kg-error {
   display: flex;
   flex-direction: column;
@@ -72,106 +44,90 @@
   padding: 24px 16px;
   text-align: center;
 }
-
-.ai-kg-error-icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
+.ai-kg-error-icon { font-size: 24px; margin-bottom: 8px; }
 .ai-kg-error-msg {
   font-size: 12px;
   color: var(--text-error);
   margin-bottom: 12px;
   word-break: break-all;
 }
-
-.ai-kg-retry-btn,
-.ai-kg-refresh-btn {
+.ai-kg-retry-btn, .ai-kg-refresh-btn {
   background: var(--interactive-accent);
   color: var(--text-on-accent);
-  border: none;
-  border-radius: 4px;
-  padding: 4px 12px;
-  font-size: 12px;
+  border: none; border-radius: 4px;
+  padding: 4px 12px; font-size: 12px;
   cursor: pointer;
 }
-
-.ai-kg-retry-btn:hover,
-.ai-kg-refresh-btn:hover {
+.ai-kg-retry-btn:hover, .ai-kg-refresh-btn:hover {
   background: var(--interactive-accent-hover);
 }
 
-/* Header */
 .ai-kg-header {
-  font-size: 13px;
-  font-weight: 600;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  font-size: 13px; font-weight: 600;
+  padding-bottom: 8px; margin-bottom: 8px;
   border-bottom: 1px solid var(--background-modifier-border);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex; align-items: center; gap: 6px;
+}
+.ai-kg-header-icon { font-size: 14px; }
+
+.ai-kg-stats {
+  font-size: 10px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
 }
 
-.ai-kg-header-icon {
-  font-size: 14px;
-}
-
-/* Results list */
 .ai-kg-results {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-
 .ai-kg-item {
   padding: 8px 6px;
   border-radius: 4px;
   cursor: default;
   transition: background 0.15s;
 }
-
 .ai-kg-item:hover {
   background: var(--background-modifier-hover);
 }
-
 .ai-kg-item-title {
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-
 .ai-kg-link {
   color: var(--text-accent);
   text-decoration: none;
   font-weight: 500;
   font-size: 13px;
 }
-
-.ai-kg-link:hover {
-  text-decoration: underline;
+.ai-kg-link:hover { text-decoration: underline; }
+.ai-kg-sim-badge {
+  font-size: 10px;
+  background: var(--background-modifier-border);
+  color: var(--text-muted);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: monospace;
 }
-
 .ai-kg-item-reason {
   font-size: 11.5px;
   color: var(--text-muted);
   line-height: 1.4;
   margin-bottom: 2px;
 }
-
 .ai-kg-item-path {
   font-size: 10px;
   color: var(--text-faint);
   opacity: 0.6;
 }
-
-/* No results */
 .ai-kg-no-results {
   text-align: center;
   padding: 24px 16px;
   opacity: 0.5;
   font-size: 12px;
 }
-
-/* Footer */
 .ai-kg-footer {
   margin-top: 12px;
   padding-top: 8px;
@@ -179,25 +135,24 @@
   text-align: center;
 }
 
-/* Settings presets */
+/* Settings */
 .ai-kg-presets {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
+  display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;
 }
-
 .ai-kg-preset-btn {
   background: var(--background-modifier-border);
   color: var(--text-normal);
   border: 1px solid var(--background-modifier-border);
-  border-radius: 4px;
-  padding: 4px 12px;
-  font-size: 12px;
-  cursor: pointer;
+  border-radius: 4px; padding: 4px 12px;
+  font-size: 12px; cursor: pointer;
 }
-
 .ai-kg-preset-btn:hover {
   background: var(--interactive-accent);
   color: var(--text-on-accent);
+}
+.ai-kg-section-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: -8px 0 12px 0;
+  padding: 0 0 0 0;
 }
